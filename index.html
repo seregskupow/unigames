@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>UNIGAMES=	</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+	<link rel="stylesheet" href="icomoon/font.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/switch.css">
+	<link rel="stylesheet" href="css/adaptive.css">
+	<link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+
+	<header>
+		<div class="header-wrap">
+			<div class="img"><img src="img/Uni_Games_logo copy.png" alt=""></div>
+			<div class="container-search">
+				  <div class="a_SearchField">
+				    <input class="a_SearchField-input" type="text" placeholder="Пошук" id="sear">
+				   <div id="micro"><i class="a_SearchField-icon fa fa-search"></i></div> 
+				  </div>
+			</div>
+			<div class="account">
+				<div class=""><a class="btn btn-primary akk" href="#" role="button" >Увійти</a></div>
+				<div class=""><a class="btn btn-outline-primary akk" href="#" role="button" >Зареєструватися</a></div>
+
+			</div>
+
+		</div>
+		
+	</header>
+<div class="registration">
+	<div class="reg-wrap">
+	<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Поштова скринька</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Поштова скринька">
+    <small id="emailHelp" class="form-text text-muted"></small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Пароль</label>
+    <input type="password" class="form-control pass" id="exampleInputPassword1" placeholder="Пароль">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1" style="color:#fff">Запам'ятати</label>
+  </div>
+  <button type="submit" class="btn btn-primary akk-close">Готово</button>
+</form>
+</div>
+</div>
+
+	<div class="main_container">
+		 <div id="overlay"></div>
+    
+    <!--SIDE MENU-->
+    <div id="side-menu-icon">
+      <div id="menu"><span></span></div>
+    </div>
+     <div id="side-menu">
+		<div class="side_bar">
+			<nav class="navbar navbar-expand-lg navbar-light bg-none menu">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a href="#" onclick="homeFunc()"><span class="icon-home size"></span><p>Головна</p></a></li>
+					<li class="nav-item"><a href="#" onclick="storeFunc()"><span class="icon-store size"></span><p>Магазин</p></a></li>
+					<li class="nav-item"><a href="#" onclick="librFunc()"><span class="icon-library size"></span><p>Бібліотека</p></a></li>
+					<li class="nav-item"><a onclick="setFunc()" href="#"><span class="icon-settings size"></span><p>Параметри</p></a></li>
+					<li class="nav-item" >
+						<div class="btn-group dropup">
+  							<button type="button" class="btn dropdown-toggle marg status" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="icon-account size" id="acc"></span><span id="status">В мережі</span></button>
+ 						 	<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button" onclick="onlineFunc()"><p>В мережі</p></button>
+    <button class="dropdown-item" type="button" onclick="offlineFunc()"><p>Не в мережі</p></button>
+    <button class="dropdown-item" type="button" onclick="disturbFunc()"><p>Відійшов</p></button>
+  							</div>
+						</div></li>
+				</ul>
+			</nav>
+			
+
+		</div>
+	</div>
+		<div class="main_content">	
+			<div class="home" id="home">
+					<h1>Спеціальні пропозиції</h1>	
+						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				  <ol class="carousel-indicators">
+				    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				  </ol>
+				  <div class="carousel-inner">
+				    <div class="carousel-item active " data-interval="2000">
+				      <img src="img/battle.jpeg" class="d-block w-100" alt="..." style="max-height:550px;">
+				      <div class="carousel-caption d-none d-md-block">
+         				 <h5>Battlefield 1</h5>
+          				<p>Знижка -30%!!!</p>
+       				 </div>
+				    </div>
+				    <div class="carousel-item" data-interval="2000">
+				      <img src="img/metro.jpg" class="d-block w-100" alt="..." style="max-height:550px;">
+				      <div class="carousel-caption d-none d-md-block">
+         				 <h5>Metro Exodus</h5>
+          				<p>Свіжа новинка 2019</p>
+       				 </div>
+				    </div>
+				    <div class="carousel-item" data-interval="2000">
+				      <img src="img/titan.jpg" class="d-block w-100" alt="..." style="max-height:550px;">
+				      <div class="carousel-caption d-none d-md-block">
+         				 <h5>Titanfall</h5>
+          				<p>Пориньте у бій в компанії сміливого бота</p>
+        			</div>
+				    </div>
+				  </div>
+				  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			
+			<h1>Також можуть зацікавити:</h1>
+			<div class="container" id="main_table">
+				  <div class="row" id="row_marg2">
+				    <div class="col-sm">
+				     <div class="card" style="width: 18rem;">
+						  <img src="img/apex.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Apex Legends</h5>
+						    <p class="card-text"> це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+						    <a  href="#" class="btn btn-primary">Дізнатися більше</a>
+						  </div>
+					</div>
+				    </div>
+				    <div class="col-sm">
+				      <div class="card" style="width: 18rem;">
+						  <img src="img/rock.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Rocket league</h5>
+						    <p class="card-text">це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+						    <a href="#" class="btn btn-primary">Дізнатися більше</a>
+						  </div>
+					</div>
+				    </div>
+				    <div class="col-sm">
+				      <div class="card" style="width: 18rem;">
+						  <img src="img/fortnite.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Fortnite</h5>
+						    <p class="card-text">це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+						    <a href="#" class="btn btn-primary">Дізнатися більше</a>
+						  </div>
+					</div>
+				    </div>
+				  </div>
+				   <div class="row" >
+				    <div class="col-sm">
+				     <div class="card" style="width: 18rem;">
+						  <img src="img/apex.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Apex Legends</h5>
+						    <p class="card-text"> це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+						    <a href="#"  class="btn btn-primary">Дізнатися більше</a>
+						  </div>
+					</div>
+				    </div>
+				    <div class="col-sm">
+				      <div class="card" style="width: 18rem;">
+						  <img src="img/rock.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Rocket league</h5>
+						    <p class="card-text">це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+						    <a href="#" class="btn btn-primary">Дізнатися більше</a>
+						  </div>
+					</div>
+				    </div>
+				    <div class="col-sm">
+				      <div class="card" style="width: 18rem;">
+						  <img src="img/fortnite.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Fortnite</h5>
+						    <p class="card-text">це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+						    <a href="#" class="btn btn-primary">Дізнатися більше</a>
+						  </div>
+					</div>
+				    </div>
+				  </div>
+			</div>
+		</div>
+
+		<div class="store" id="store">	
+			<div class="container">
+				<ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-bottom: 15px;">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Шутери</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Аркади</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Пригодницькі</a>
+  </li>
+  
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><div class="row" id="row_marg2">
+				    <div class="col">
+				      <div class="card bigger" style="width: 18rem;">
+						  <img src="img/call.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Card title</h5>
+						    <p class="card-text">це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+						    <a href="#" class="btn btn-primary">40$</a>
+						  </div>
+						</div>
+				    </div>
+				    <div class="col">
+				      <div class="row">
+							    <div class="col smol">
+							      <div class="card smaller" style="width: 18rem;">
+									  <img src="img/fortnite2.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+									    <h5 class="card-title">Card title</h5>
+									    <p class="card-text">це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+									    <a href="#" class="btn btn-primary">25$</a>
+									  </div>
+									</div>
+							    </div> 
+				    	</div>
+				    	<div class="row">
+							    <div class="col">
+							      <div class="card smaller" style="width: 18rem;" id="smol_marg">
+									  <img src="img/rocket2.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+									    <h5 class="card-title">Card title</h5>
+									    <p class="card-text">це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+									    <a href="#" class="btn btn-primary">30$</a>
+									  </div>
+								</div>
+							    </div> 
+				    	</div>
+				    
+				  </div>
+			</div></div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><div class="row" id="row_marg2">
+				    
+				    <div class="col">
+				      <div class="row">
+							    <div class="col smol">
+							      <div class="card smaller" style="width: 18rem;">
+									  <img src="img/rain.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+									    <h5 class="card-title">Card title</h5>
+									    <p class="card-text">це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+									    <a href="#" class="btn btn-primary">20$</a>
+									  </div>
+									</div>
+							    </div> 
+				    	</div>
+				    	<div class="row">
+							    <div class="col">
+							      <div class="card smaller" style="width: 18rem;" id="smol_marg">
+									  <img src="img/rocket2.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+									    <h5 class="card-title">Card title</h5>
+									    <p class="card-text">це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+									    <a href="#" class="btn btn-primary">40$</a>
+									  </div>
+								</div>
+							    </div> 
+				    	</div>
+				    
+				  </div>
+				  <div class="col">
+				      <div class="card bigger" style="width: 18rem;">
+						  <img src="img/apex2.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Apex Legends</h5>
+						    <p class="card-text">це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+						    <a href="#" class="btn btn-primary">Безкоштовно</a>
+						  </div>
+						</div>
+				    </div>
+			</div></div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><div class="row" id="row_marg2">
+				    <div class="col">
+				      <div class="card bigger" style="width: 18rem;">
+						  <img src="img/battle2.png" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Card title</h5>
+						    <p class="card-text">це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+						    <a href="#" class="btn btn-primary">60$</a>
+						  </div>
+						</div>
+				    </div>
+				    <div class="col">
+				      <div class="row">
+							    <div class="col smol">
+							      <div class="card smaller" style="width: 18rem;">
+									  <img src="img/fortnite2.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+									    <h5 class="card-title">Card title</h5>
+									    <p class="card-text">це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+									    <a href="#" class="btn btn-primary">25$</a>
+									  </div>
+									</div>
+							    </div> 
+				    	</div>
+				    	<div class="row">
+							    <div class="col">
+							      <div class="card smaller" style="width: 18rem;" id="smol_marg">
+									  <img src="img/rocket2.jpg" class="card-img-top" alt="...">
+									  <div class="card-body">
+									    <h5 class="card-title">Card title</h5>
+									    <p class="card-text">це безкоштовна гра Battle Royale, де легендарні конкуренти борються за славу, славу і стан на околицях Frontier.</p>
+									    <a href="#" class="btn btn-primary">20$</a>
+									  </div>
+								</div>
+							    </div> 
+				    	</div>
+				    
+				  </div>
+			</div></div>
+</div>
+				  
+
+			
+			  
+			
+		</div>
+
+		
+	
+</div>
+<div class="library" id="libr">
+			<div class="container" id="store_row">
+				  <div class="row" id="row_marg2">
+				    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+				     <div class="card" style="width: 18rem;">
+						  <img src="img/apex.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    
+						    <a href="#" class="btn btn-primary zap">Запуск гри</a>
+						  </div>
+					</div>
+				    </div>
+				    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+				      <div class="card" style="width: 18rem;">
+						  <img src="img/rock.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    
+						    <a href="#" class="btn btn-primary zap">Запуск гри</a>
+						  </div>
+					</div>
+				    </div>
+				    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+				      <div class="card" style="width: 18rem;">
+						  <img src="img/fortnite.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    
+						    <a href="#" class="btn btn-primary zap">Запуск гри</a>
+						  </div>
+					</div>
+				    </div>
+				    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+				      <div class="card" style="width: 18rem;">
+						  <img src="img/fortnite.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    
+						    <a href="#" class="btn btn-primary zap">Запуск гри</a>
+						  </div>
+					</div>
+				    </div>
+				  </div>
+				   <div class="row" >
+				    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+				     <div class="card" style="width: 18rem;">
+						  <img src="img/apex.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						   
+						    <a href="#" class="btn btn-primary zap">Запуск гри</a>
+						  </div>
+					</div>
+				    </div>
+				    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+				      <div class="card" style="width: 18rem;">
+						  <img src="img/rock.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    
+						    <a href="#" class="btn btn-primary zap">Запуск гри</a>
+						  </div>
+					</div>
+				    </div>
+				    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+				      <div class="card" style="width: 18rem;">
+						  <img src="img/fortnite.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						  
+						    <a href="#" class="btn btn-primary zap">Запуск гри</a>
+						  </div>
+					</div>
+				    </div>
+				    
+				  
+			</div>
+		</div>
+	</div>
+	<div class="settings" id="settings">
+
+		<div class="settings-container">
+			<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Додаток</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Діагностика</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Повідомлення</a>
+  </div>
+</nav>
+
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><table class="table table-dark">
+  	<thead>
+    <tr>
+      <th scope="col">Параметри додатку</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Показувати UNIGAMES після гри</td>
+      <td class="aligh-right">
+      	<div id="toggles">
+  <input type="checkbox" name="checkbox1" id="checkbox3" class="ios-toggle" />
+  <label for="checkbox3" class="checkbox-label" data-off="" data-on=""></label>
+</div>
+</td>
+    </tr>
+    <tr>
+      <td>Стандартне вікно</td>
+      <td class="aligh-right"><div class="dropdown">
+  <button class="btn3 b1 set_but btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+    Головна
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  	<a class="dropdown-item page" id="dropdown-item" href="#"><p id="change">Головна</p></a>
+    <a class="dropdown-item page" id="dropdown-item" href="#"><p id="change">Магазин</p></a>
+    <a class="dropdown-item page" href="#"><p>Бібліотека</p></a>
+  </div>
+</div>
+</td>
+    </tr>
+    <tr>
+      <td>Повідомлення помилки</td>
+      <td class="aligh-right"><div class="dropdown">
+  <button class="btn3 b2 set_but btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Відправляти
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  	<a class="dropdown-item error" href="#"><p>Відправляти</p></a>
+    <a class="dropdown-item error" href="#"><p>Автоматично</p></a>
+    <a class="dropdown-item error" href="#"><p>Не поідомляти</p></a>
+  </div>
+</div></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="table table-dark">
+  <tbody>
+    <tr>
+      <td>Максимальна швидкість завантаження</td>
+      <td class="aligh-right"><div class="dropdown">
+  <button class="btn3 b3 set_but btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Максимальна
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  	<a class="dropdown-item limit" href="#"><p>Максимальна</p></a>
+    <a class="dropdown-item limit" href="#"><p>75 Mb/s</p></a>
+    <a class="dropdown-item limit" href="#"><p>50 Mb/s</p></a>
+    <a class="dropdown-item limit" href="#"><p>25 Mb/s</p></a>
+  </div>
+</div>
+</td>
+    </tr>
+    <tr>
+      <td>Максимальна швидкість завантаження у грі</td>
+      <td class="aligh-right"><div class="dropdown">
+  <button class="btn3 b4 set_but btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Максимальна
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  	<a class="dropdown-item limit2" href="#"><p>Максимальна</p></a>
+   <a class="dropdown-item limit2" href="#"><p>75 Mb/s</p></a>
+    <a class="dropdown-item limit2" href="#"><p>50 Mb/s</p></a>
+    <a class="dropdown-item limit2" href="#"><p>25 Mb/s</p></a>
+  </div>
+</div>
+</td>
+    </tr>
+  
+  </tbody>
+</table>
+
+</div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+  	<table class="table table-dark">
+  <tbody>
+    <tr>
+      <td>Відправляти відомості про апаратне забезпечення</td>
+      <td class="aligh-right">
+      	<div id="toggles">
+  <input type="checkbox" name="checkbox1" id="checkbox4" class="ios-toggle" />
+  <label for="checkbox4" class="checkbox-label" data-off="" data-on=""></label>
+</div></td>
+
+    </tr>
+    <tr>
+      <td>Відправляти відомості про використання</td>
+      <td class="aligh-right">
+      	<div id="toggles">
+  <input type="checkbox" name="checkbox1" id="checkbox5" class="ios-toggle" />
+  <label for="checkbox5" class="checkbox-label" data-off="" data-on=""></label>
+</div></td>
+
+    </tr>
+    <tr>
+       <td>Повідомлення помилки</td>
+      <td class="aligh-right"><div class="dropdown">
+  <button class="btn3 b2 set_but btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Відправляти
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  	<a class="dropdown-item error" href="#"><p>Відправляти</p></a>
+    <a class="dropdown-item error" href="#"><p>Автоматично</p></a>
+    <a class="dropdown-item error" href="#"><p>Не поідомляти</p></a>
+  </div>
+</div></td>
+
+    </tr>
+  </tbody>
+</table>
+<table class="table table-dark">
+  <tbody>
+    <tr>
+      <td>Записувати дані гри</td>
+      <td class="aligh-right">
+      	<div id="toggles">
+  <input type="checkbox" name="checkbox1" id="checkbox6" class="ios-toggle" />
+  <label for="checkbox6" class="checkbox-label" data-off="" data-on=""></label>
+</div></td>
+
+    </tr>
+    <tr>
+      <td>Завантаження в безпечному режимі</td>
+      <td class="aligh-right">
+      	<div id="toggles">
+  <input type="checkbox" name="checkbox1" id="checkbox7" class="ios-toggle" />
+  <label for="checkbox7" class="checkbox-label" data-off="" data-on=""></label>
+</div></td>
+
+    </tr>
+  </tbody>
+</table></div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+	  	<table class="table table-dark">
+	  <tbody>
+	    <tr>
+	      <td>Вспливаючі повідомлення</td>
+	      <td class="aligh-right">
+      	<div id="toggles">
+  <input type="checkbox" name="checkbox1" id="checkbox8" class="ios-toggle" />
+  <label for="checkbox8" class="checkbox-label" data-off="" data-on=""></label>
+</div></td>
+	    </tr>
+	    <tr>
+	      <td>Вхідні дзвінки</td>
+	      <td class="aligh-right">
+      	<div id="toggles">
+  <input type="checkbox" name="checkbox1" id="checkbox10" class="ios-toggle" />
+  <label for="checkbox10" class="checkbox-label" data-off="" data-on=""></label>
+</div></td>
+	    </tr>
+	    <tr>
+	      <td>Ігрові запрошення</td>
+	      <td class="aligh-right">
+      	<div id="toggles">
+  <input type="checkbox" name="checkbox1" id="checkbox9" class="ios-toggle" />
+  <label for="checkbox9" class="checkbox-label" data-off="" data-on=""></label>
+</div></td>
+	    </tr>
+	  </tbody>
+	</table>
+	</div>
+</div>
+			
+
+
+
+		</div>
+</div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

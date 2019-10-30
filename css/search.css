@@ -1,0 +1,35 @@
+
+.container-search {
+  
+  width: 30%;
+}
+.a_SearchField {
+  position: relative;
+  height: 2.5rem;
+}
+.a_SearchField .a_SearchField-input {
+  background: #121212;
+  width: 100%;
+  height: 100%;
+  font-size: 1.125rem;
+  padding-left: 2.5rem;
+  border: solid 1px #0069d9;
+  border-radius: 5px;
+  color: #fff;
+  outline: none;
+}
+.a_SearchField .a_SearchField-input:focus {
+  border-color: #44484a;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.05);
+}
+.a_SearchField .a_SearchField-icon {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.8125rem;
+  font-size: 1.25rem;
+  color: #0069d9;
+}
+.a_SearchField-icon:hover {
+  cursor: pointer;
+
+}
